@@ -81,6 +81,8 @@ setContactos([...contactos, nuevo]);
 
       <p className="app-subtitle">Contactos guardados</p>
 
+      <FormularioContacto onAgregarContacto={agregarContacto} />
+
       {/* Recorremos el arreglo contactos y pintamos una tarjeta por cada uno */}
       {contactos.map((c) => (
         <ContactoCard
