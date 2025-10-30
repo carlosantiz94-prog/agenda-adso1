@@ -2,10 +2,11 @@
 // Este componente arma la pantalla completa y usa ContactoCard para cada persona.
 import "./App.css"; // Importamos estilos de la app
 import ContactoCard from "./components/ContactoCard.jsx"; // Importamos el componente hijo
+import FormularioContacto from "./components/FormularioContacto.jsx";
 
 export default function App() {
   // Esta es nuestra "base de datos" inicial quemada en el código
-  const contactos = [
+  const [contactos, setContactos] = useState([
     {
       id: 1,
       nombre: "Carolina Pérez",
@@ -69,7 +70,10 @@ export default function App() {
       correo: "maria@sena.edu.co",
       etiqueta: "Instructor",
     },
-  ];
+  ]);
+  const agregarContacto = (nuevo) => {
+setContactos([...contactos, nuevo]);
+};
 
   return (
     <main className="app-container">
