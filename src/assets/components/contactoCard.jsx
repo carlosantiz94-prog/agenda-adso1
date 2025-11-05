@@ -4,12 +4,14 @@ export default function ContactoCard({
   correo,
   etiqueta,
   onEliminar,
+  empresa,
 }) {
   return (
     <div className="card">
       <h3>{nombre}</h3>
       <p>📱 {telefono}</p>
       <p>✉️ {correo}</p>
+      <p>{empresa}</p>
       {etiqueta && <span className="tag">{etiqueta}</span>}
       <button className="btn-eliminar" onClick={() => onEliminar(correo)}>
         Eliminar
