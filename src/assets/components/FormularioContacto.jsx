@@ -1,59 +1,56 @@
 import { useState } from "react";
+
 export default function FormularioContacto({ onAgregar }) {
-const [nombre, setNombre] = useState("");
-const [telefono, setTelefono] = useState("");
-const [correo, setCorreo] = useState("");
-const [etiqueta, setEtiqueta] = useState("");
-const manejarEnvio = (e) => {
-e.preventDefault();
-if (!nombre || !telefono) {
-return alert("Completa los campos obligatorios");
+  const [form, setForm] = useState({
+    nombre: "",
+    correo: "",
+    telefono: "",
+    etiqueta: "",
+  });
+
+  const onChange = (e) => {
+    const { name, value } = e.target;
+    setForm((f) => ({ ...f, [name]: value }));
+  };
+
+  const onSubmit = (e) => {
+    e.preventDefault(); // evita recargar
+    if (!form.nombre.trim() || !form.telefono.trim()) {
+      alert("Completa al menos Nombre y Teléfono");
+      return;
+    }
+    onAgregar(form); // App agrega id y actualiza la lista
+    setForm({ nombre: "", correo: "", telefono: "", etiqueta: "" }); // limpiar
+  };
+
+  return (
+    <form onSubmit={onSubmit} className="form-contacto">
+      <input
+        name="nombre"
+        placeholder="Nombre"
+        value={form.nombre}
+        onChange={onChange}
+      />
+      <input
+        name="telefono"
+        placeholder="Teléfono"
+        value={form.telefono}
+        onChange={onChange}
+      />
+      <input
+        name="correo"
+        placeholder="Correo"
+        value={form.correo}
+        onChange={onChange}
+      />
+      <input
+        name="etiqueta"
+        placeholder="Etiqueta (opcional)"
+        value={form.etiqueta}
+        onChange={onChange}
+      />
+      <button type="submit">Agregar contacto</button>
+    </form>
+  );
 }
 
-const nuevo = {
-id: Date.now(),
-nombre,
-telefono,
-correo,
-etiqueta,
-};
-
-onAgregar(nuevo);
-// Limpiar formulario
-setNombre("");
-setTelefono("");
-setCorreo("");
-setEtiqueta("");
-};
-return (
-<form onSubmit={manejarEnvio} className="form-contacto">
-<input
-type="text"
-placeholder="Nombre"
-value={nombre}
-onChange={(e) => setNombre(e.target.value)}
-required
-/>
-<input
-type="tel"
-placeholder="Teléfono"
-value={telefono}
-onChange={(e) => setTelefono(e.target.value)}
-required
-/>
-<input
-type="email"
-placeholder="Correo"
-value={correo}
-onChange={(e) => setCorreo(e.target.value)}
-/>
-<input
-type="text"
-placeholder="Etiqueta (opcional)"
-value={etiqueta}
-onChange={(e) => setEtiqueta(e.target.value)}
-/>
-<button type="submit">Agregar contacto</button>
-</form>
-);
-}
