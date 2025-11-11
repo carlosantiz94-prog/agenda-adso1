@@ -1,6 +1,6 @@
 
 import { useState } from "react";
-import ".src/App.css" /* styles  */;
+import ".src/App.css" ;
 import ContactoCard from ".src/assets/components/ContactoCard.jsx";
 import FormularioContacto from ".src/assets/components/FormularioContacto.jsx";
 
@@ -50,7 +50,7 @@ setContactos([...contactos, nuevo]);
 
   return (
     <main className="app-container">
-      <h1 className="app-title">Agenda ADSO 📒</h1>
+      <h1 className="app-title">Agenda ADSO</h1>
 
       <p className="app-subtitle">Contactos guardados</p>
       <FormularioContacto onAgregar={agregarContacto} />
