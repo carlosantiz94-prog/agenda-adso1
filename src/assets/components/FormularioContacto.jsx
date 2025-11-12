@@ -24,39 +24,48 @@ export default function FormularioContacto({ onAgregar }) {
   };
 
   return (
-    <form className="form" onSubmit={onSubmit}>
-      <input
-        name="nombre"
-        value={form.nombre}
-        onChange={onChange}
-        placeholder="Nombre"
-      />
-      <input
-        name="telefono"
-        value={form.telefono}
-        onChange={onChange}
-        placeholder="Teléfono"
-      />
-      <input
-        name="correo"
-        value={form.correo}
-        onChange={onChange}
-        placeholder="Correo"
-      />
-      <input
-        name="etiqueta"
-        value={form.etiqueta}
-        onChange={onChange}
-        placeholder="Etiqueta opcional"
-      />
-      <input
-        name="empresa"
-        value={form.correo}
-        onChange={onChange}
-        placeholder="Empresa"
-      />
-      <button className="btn-agregar">Agregar contacto</button>
-    </form>
+    <form 
+ onSubmit={onSubmit} 
+ className="bg-white shadow-md rounded-lg p-5 flex flex-col gap-4 mb-6" 
+> 
+ <label className="text-sm font-semibold">Nombre *</label> 
+ <input 
+ name="nombre" 
+ value={form.nombre} 
+ onChange={onChange} 
+ placeholder="Ej: Ana López" 
+ className="border rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-morado" 
+ /> 
+  
+ <label className="text-sm font-semibold">Teléfono *</label> 
+ <input 
+ name="telefono" 
+ value={form.telefono} 
+ onChange={onChange} 
+ className="border rounded-md p-2 focus:ring-2 focus:ring-morado" 
+ /> 
+  
+ <label className="text-sm font-semibold">Correo *</label> 
+ <input 
+ name="correo" 
+ value={form.correo} 
+ onChange={onChange} 
+ className="border rounded-md p-2 focus:ring-2 focus:ring-morado" 
+ /> 
+  
+ <label className="text-sm font-semibold">Etiqueta (opcional)</label> 
+ <input 
+ name="etiqueta" 
+ value={form.etiqueta} 
+ onChange={onChange} 
+ className="border rounded-md p-2 focus:ring-2 focus:ring-morado" 
+ /> 
+  
+ <button className="bg-morado hover:bg-morado-oscuro text-white py-2 rounded-md"> 
+ Agregar contacto 
+ </button> 
+</form> 
+
   );
 }
 

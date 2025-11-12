@@ -1,8 +1,20 @@
 
-import { useState } from "react";
-import ".src/App.css" ;
-import ContactoCard from ".src/assets/components/ContactoCard.jsx";
-import FormularioContacto from ".src/assets/components/FormularioContacto.jsx";
+import FormularioContacto from "./components/FormularioContacto"; 
+import ContactoCard from "./components/ContactoCard"; 
+export default function App() { 
+ return ( 
+ <main className="max-w-2xl mx-auto mt-10 p-4"> 
+ <h1 className="text-3xl font-bold text-morado text-center mb-2"> 
+ Agenda ADSO v4 
+ </h1> 
+ <p className="text-gray-500 text-center mb-6"> 
+ Interfaz moderna con TailwindCSS 
+ </p> 
+ <FormularioContacto /> 
+ <ContactoCard /> 
+ </main> 
+ ); 
+} 
 
 export default function App() {
 const [contactos, setContactos] = useState([
