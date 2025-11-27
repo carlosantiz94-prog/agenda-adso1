@@ -20,6 +20,20 @@
       "telefono": "3427382",
       "correo": "kevin@gmail.com",
       "etiqueta": "Tecno"
+    },
+    {
+      "id": "3f71",
+      "nombre": "sebastian hurtado",
+      "telefono": "325647831",
+      "correo": "elpuma@gmailcom",
+      "etiqueta": "inge.2"
+    },
+    {
+      "id": "7630",
+      "nombre": "andres martines",
+      "telefono": "345678223",
+      "correo": "andres@gmail.com",
+      "etiqueta": "independiente"
     }
   ]
 }
