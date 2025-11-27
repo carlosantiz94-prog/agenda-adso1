@@ -265,7 +265,7 @@ function App() {
 
         {/* Pie de página con los datos del instructor */}
         <footer className="mt-8 text-xs text-gray-400">
-          <p>Desarrollo Web – ReactJS | Proyecto Agenda ADSO V9</p>
+          <p>Desarrollo Web – ReactJS | Proyecto Agenda ADSO</p>
           <p>Instructor: Gustavo Adolfo Bolaños Dorado</p>
         </footer>
       </div>
