@@ -367,7 +367,7 @@ function App() {
                   </span>
                 </p>
                 <p className="text-[11px] text-purple-100/80">
-                  Usa este proyecto como evidencia en tu portafolio de
+                  CARLOS SANTIS 3169901 · SENA CTMA
                   Desarrollo Web – ReactJS.
                 </p>
               </div>
@@ -395,9 +395,7 @@ function App() {
                 Desarrollo Web – ReactJS
               </p>
               <p className="text-xs text-slate-400 mt-3">
-                “Pequeños proyectos bien cuidados valen más que mil ideas sin
-                código. Agenda ADSO es tu carta de presentación como
-                desarrollador.”
+                “los grandes logros no se logran por la fuerza, sino por el coraje de los que se acercan a él.”
               </p>
             </div>
           </aside>

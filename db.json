@@ -8,11 +8,11 @@
       "etiqueta": "profe"
     },
     {
-      "id": "3a4f",
-      "nombre": "carlos",
+      "nombre": "carlos angel",
       "telefono": "34264721",
       "correo": "carlos@gmail,com",
-      "etiqueta": "iinge"
+      "etiqueta": "iinge",
+      "id": "3a4f"
     },
     {
       "id": "b271",
@@ -34,6 +34,13 @@
       "correo": "andres@gmail.com",
       "etiqueta": "independiente",
       "id": "7630"
+    },
+    {
+      "id": "458c",
+      "nombre": "carlos santis",
+      "telefono": "34264721",
+      "correo": "carlos@gmail,com",
+      "etiqueta": "independiente"
     }
   ]
 }
